@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Backery Shop</title>
-  <meta name="description" content="Handcrafted cakes, cupcakes and tarts baked fresh daily. Order online or design your own special celebration cake." />
-  <!-- Boxicons -->
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <title>Cakes &amp; Desserts Menu — Bakery Shop</title>
+  <meta name="description" content="Browse the full Bakery Shop menu: strawberry cake, chocolate drip, red velvet cupcakes, tarts, cheesecakes and tiramisu." />
+   <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"rel="stylesheet">
   <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,35 +20,17 @@
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
-        <a href="products.html">Products</a>
+        <a href="products.html" class="active">Products</a>
         <a href="special-orders.html">Special Orders</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Deliver You A<br />Blissful Dessert<br />in Every Bite</h1>
-        <p>Every cake is baked from scratch each morning with real butter, seasonal fruit and a whole lot of care — made to turn ordinary days into small celebrations.</p>
-        <a href="products.html" class="btn btn-mint">Order Now</a>
-      </div>
-      <div class="hero-image">
-        <img src="../images/hero.png" alt="Assorted mini cakes decorated with fresh fruit and flowers" />
-      </div>
-    </section>
-
-    <section class="section section-blush">
-      <div class="container">
-        <h2 class="section-title">Freshly Baked Today</h2>
-        <p class="section-subtitle">A little taste of what's on the counter right now.</p>
-        <div id="featured-grid" class="card-grid four"></div>
-        <div class="center" style="margin-top:2.5rem">
-          <a href="products.html" class="btn btn-blush">See all products</a>
-        </div>
-      </div>
-    </section>
+  <main class="page container">
+    <h1 class="page-title">Our Menu</h1>
+    <p class="page-subtitle">Everything below is baked the same morning it's sold. Tap a cake for sizes and toppings.</p>
+    <div id="menu-grid" class="menu-grid"></div>
   </main>
 
   <footer class="site-footer">
@@ -58,7 +40,7 @@
         <p>Address : Opposite Angkor High School, Siem Reap Municipality, Kingdom of Cambodia</p>
         <p>+855-716-023-518</p>
       </div>
-      <div class="footer-social">
+       <div class="footer-social">
         <h3>Follow Me</h3>
         <div class="social-media">
           <a href="https://web.facebook.com/chhouk.sreyying/"><i class='bx bxl-facebook'></i></a>
@@ -71,6 +53,6 @@
   </footer>
 
   <script src="../javascript/script.js"></script>
-  <script>renderFeatured();</script>
+  <script>renderMenu();</script>
 </body>
 </html>

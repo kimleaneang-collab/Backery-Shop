@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Backery Shop</title>
-  <meta name="description" content="Handcrafted cakes, cupcakes and tarts baked fresh daily. Order online or design your own special celebration cake." />
-  <!-- Boxicons -->
+  <title>Cake — Bakery Shop</title>
+  <meta name="description" content="Handcrafted cakes from Bakery Shop." />
+   <!-- Boxicons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="icon" href="images/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,35 +20,30 @@
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
-        <a href="products.html">Products</a>
+        <a href="products.html" class="active">Products</a>
         <a href="special-orders.html">Special Orders</a>
         <a href="contact.html">Contact</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="hero-text">
-        <h1>Deliver You A<br />Blissful Dessert<br />in Every Bite</h1>
-        <p>Every cake is baked from scratch each morning with real butter, seasonal fruit and a whole lot of care — made to turn ordinary days into small celebrations.</p>
-        <a href="products.html" class="btn btn-mint">Order Now</a>
-      </div>
-      <div class="hero-image">
-        <img src="../images/hero.png" alt="Assorted mini cakes decorated with fresh fruit and flowers" />
-      </div>
-    </section>
+  <main class="page container detail-grid">
+    <img id="p-image" src="" alt="" class="detail-image" />
+    <div>
+      <h1 id="p-name" class="page-title"></h1>
+      <p id="p-description" class="body-text"></p>
 
-    <section class="section section-blush">
-      <div class="container">
-        <h2 class="section-title">Freshly Baked Today</h2>
-        <p class="section-subtitle">A little taste of what's on the counter right now.</p>
-        <div id="featured-grid" class="card-grid four"></div>
-        <div class="center" style="margin-top:2.5rem">
-          <a href="products.html" class="btn btn-blush">See all products</a>
-        </div>
+      <dl class="info-boxes">
+        <div class="info-box"><dt>Price</dt><dd id="p-price"></dd></div>
+        <div class="info-box"><dt>Size</dt><dd id="p-size"></dd></div>
+        <div class="info-box"><dt>Toppings</dt><dd id="p-toppings"></dd></div>
+      </dl>
+
+      <div class="btn-row">
+        <a href="order-confirmed.html" class="btn btn-mint">Order Now</a>
+        <a href="special-orders.html" class="btn btn-outline">Choose Your Design</a>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
@@ -71,6 +66,6 @@
   </footer>
 
   <script src="../javascript/script.js"></script>
-  <script>renderFeatured();</script>
+  <script>renderProductDetail();</script>
 </body>
 </html>
