@@ -674,6 +674,7 @@ a {
   max-width: 72rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  min-height: calc(110vh - 180px);
 }
 
 @media (min-width: 768px) {
@@ -711,12 +712,13 @@ a {
 
 /* ---------- Order confirmed ---------- */
 .confirmed {
-  max-width: 48rem;
+  max-width: 45rem;
   margin: 1rem auto;
   background: var(--blush);
   border-radius: 1.5rem;
   padding: 2.5rem;
   text-align: center;
+  min-height: calc(90vh - 180px);
 }
 
 .confirmed img {
