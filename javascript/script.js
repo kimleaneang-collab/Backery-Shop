@@ -1,5 +1,7 @@
 /* Bakery Shop — static site logic (multi-page) */
 
+
+
 const products = [
   {
     slug: "strawberry-cake",
@@ -71,7 +73,7 @@ const products = [
     description:
       "A curated plate of our best-loved cheesecake slices — silky, light and topped with seasonal fruit and chocolate.",
   },
-  {
+ {
     slug: "classic-tiramisu-cake",
     name: "Classic Tiramisu Cake",
     image: "../images/tiramisu.png",
@@ -81,15 +83,104 @@ const products = [
     description:
       "Espresso-soaked sponge and mascarpone cream, dusted with cocoa and wrapped in ladyfingers. A timeless finish to any meal.",
   },
+  {
+    slug: "croissant",
+    name: "Croissant",
+    image: "../images/croissant.png", // Make sure you have a real croissant.png in your images folder
+    price: 4,                        // Updated price (e.g., $4 instead of $40)
+    size: "1 piece",                 // Updated size
+    toppings: "Butter glaze",        // Updated toppings
+    description:                     // Updated description
+      "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
+
+  {
+    slug: "croissant",
+    name: "Croissant",
+    image: "../images/cake9.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake9.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
+
+    {
+    slug: "cuteis cake",
+    name: "cuteis cake",
+    image: "../images/cake2.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake2.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
+
+    {
+    slug: "strawberry",
+    name: "strawberry",
+    image: "../images/cake3.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake3.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
+
+    {
+    slug: "redburry cake",
+    name: "redburry cake",
+    image: "../images/cake4.png",
+    slug: "cherry cake",
+    name: "cherry cake",
+    image: "../images/cake5.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake5.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
     {
     slug: "croissant",
     name: "Croissant",
-    image: "../images/croissant.png",
-    price: 40,
-    size: 'Ø 8" · serves 10',
-    toppings: "Cocoa dust, ladyfingers, espresso cream",
-    description:
-      "Espresso-soaked sponge and mascarpone cream, dusted with cocoa and wrapped in ladyfingers. A timeless finish to any meal.",
+    image: "../images/cake6.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake6.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
+
+    {
+    slug: "chocolate cake",
+    name: "chocolate cake",
+    image: "../images/cake7.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake7.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
+    {
+    slug: "green cake",
+    name: "green cake",
+    image: "../images/cake8.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake8.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
+  },
+
+   {
+    slug: "White rose cake pink red",
+    name: "White rose cake pink red",
+    image: "../images/cake10.png",               // Shown on Menu / Products page
+    specialImage: "../images/cake10.png", // Shown ONLY on Special Orders page
+    price: 4,
+    size: "1 piece",
+    toppings: "Butter glaze",
+    description: "Flaky, golden-brown butter croissant baked fresh daily.",
   },
 ];
 
@@ -116,10 +207,13 @@ function renderFeatured() {
     .join("");
 }
 
-/* Special orders: all products */
+/* Special orders: uses specialImage if available, falls back to regular image */
 function renderSpecialOrders() {
   document.getElementById("special-grid").innerHTML = products
-    .map((p) => simpleCardHTML(p, `from $${p.price}`))
+    .map((p) => {
+      const displayProduct = { ...p, image: p.specialImage || p.image };
+      return simpleCardHTML(displayProduct, `from $${p.price}`);
+    })
     .join("");
 }
 
@@ -167,3 +261,4 @@ function setupContactForm() {
     location.href = "order-confirmed.html";
   });
 }
+
