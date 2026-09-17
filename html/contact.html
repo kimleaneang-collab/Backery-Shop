@@ -27,16 +27,35 @@
   </header>
 
   <main class="section-blush">
-    <div class="page container contact-grid">
-      <div>
+    <div class="page container contact-container">
+      <!-- Left Column: Detailed Text and Store Info -->
+      <div class="contact-info">
         <h1 class="page-title">Let's Get In Touch</h1>
-        <p class="body-text">We'd love to hear from you! Whether you have a question about our daily bakes, need help planning a special order, or just want to say hello, feel free to drop us a note below. Our team is always here to make your day a little sweeter. Fill out your details and message, and we'll get back to you as soon as possible!</p>
+        <p class="body-text">
+          We would genuinely love to hear from you! At Bakery Shop, every single batch is handcrafted with love, premium ingredients, and a passion for bringing joy to our community in Siem Reap. Whether you have a quick question regarding our daily morning bakes, need advice on choosing the perfect pastries for an upcoming family gathering, or want to collaborate on a custom multi-tier cake for a wedding or birthday, our team is always here to help. 
+        </p>
+        <p class="body-text" style="margin-top: 15px;">
+          Please feel free to fill out the form with your details, specific requests, or dietary questions. We make it a priority to review every message carefully and will get back to you as swiftly as possible to make your day a little sweeter!
+        </p>
+        
+        <div class="info-details" style="margin-top: 25px;">
+          <p style="margin-bottom: 10px;"><strong>📍 Address:</strong> Opposite Angkor High School, Siem Reap Municipality</p>
+          <p style="margin-bottom: 10px;"><strong>📞 Phone:</strong> +855-716-023-518</p>
+        </div>
       </div>
+
+      <!-- Right Column: Elevated Form Card -->
       <form id="contact-form" class="contact-form">
-        <input required name="name" placeholder="Your Name" />
-        <input required type="email" name="email" placeholder="Your Email" />
-        <textarea required name="message" rows="8" placeholder="Your Message"></textarea>
-        <button type="submit" class="btn btn-mint">Submit</button>
+        <div class="input-group">
+          <input required name="name" placeholder="Your Name" />
+        </div>
+        <div class="input-group">
+          <input required type="email" name="email" placeholder="Your Email" />
+        </div>
+        <div class="input-group">
+          <textarea required name="message" rows="5" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-mint submit-btn">Send Message 🧁</button>
       </form>
     </div>
   </main>

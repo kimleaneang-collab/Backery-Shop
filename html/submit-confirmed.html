@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Order Confirmed — Bakery Shop</title>
-  <meta name="description" content="Your Bakery Shop order has been received. We'll be in touch shortly with pickup or delivery details." />
+  <meta name="description" content="Your order or message has been successfully submitted to Bakery Shop." />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="icon" href="images/logo.png" type="image/png" />
+  <link rel="icon" href="../images/logo.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
@@ -26,12 +26,37 @@
     </div>
   </header>
 
-  <main class="page container">
-    <div class="confirmed">
-      <img src="../images/logo.png" alt="Bakery Shop logo" />
-      <h1>Submit Confirmed! 🎉</h1>
-      <p>Thank you so much for your order! We are so excited to bake something special just for you. Your delicious treats are currently being prepared with care, and we'll make sure they get to you fresh and ready to enjoy. If you need anything else or have any questions, feel free to reach out. Thanks for supporting our bakery!</p>
-      
+  <main class="section-blush">
+    <div class="container confirmation-page-wrapper">
+      <div class="confirmation-card">
+        
+        <!-- Small Logo Badge / Icon -->
+        <div class="conf-badge">
+          <img src="../images/logo.png" alt="Bakery shop icon" />
+        </div>
+
+        <h1 class="page-title">Submit Confirmed! 🎉</h1>
+        
+        <p class="body-text confirmation-intro">
+          Thank you so much for reaching out to us! We are thrilled to bake something special just for you. Your delicious treats or inquiry are currently being handled with love and care by our pastry team.
+        </p>
+
+        <!-- Next Steps Box -->
+        <div class="next-steps-box">
+          <h3>What happens next?</h3>
+          <ul>
+            <li><i class='bx bx-check-circle'></i> Our team will review your request within 1 business day.</li>
+            <li><i class='bx bx-envelope'></i> We will contact you via email or phone to finalize details or confirm pickup.</li>
+          </ul>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="confirmation-actions">
+          <a href="index.html" class="btn btn-mint">Return to Home</a>
+          <a href="products.html" class="btn btn-outline">Browse More Products</a>
+        </div>
+
+      </div>
     </div>
   </main>
 
@@ -53,5 +78,7 @@
       </div>
     </div>
   </footer>
+
+  <script src="../javascript/script.js"></script>
 </body>
 </html>
